@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do milhão</title>
+    <script src="./js/index.js" defer type="module"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-menu">
+        <img src="./assets/logo.svg" alt="Show do milhão" class="logo">
+        <button id="btn-play">JOGAR</button>
+        <div class="background-strip"></div>
+    </div>
+
+    <div class="container-game hide">
+        <div class="container-left">
+            <img src="./assets/logo.svg" alt="Show do milhão" class="logo">
+            <div class="container-question">
+                <div class="title">
+                    <h1>Pergunta 01</h1>
+                </div>
+                <div class="question-description">
+                    <p>Vatapá e uma comida típica de qual estado?</p>
+                </div>
+            </div>
+            <div class="container-alternatives">
+                <button class="alternative" id="altA"><span>a</span>
+                    <p>Paraná</p>
+                </button>
+                <button class="alternative" id="altB"><span>b</span>
+                    <p>Santa Catarina</p>
+                </button>
+                <button class="alternative" id="altC"><span>c</span>
+                    <p>São Paulo</p>
+                </button>
+                <button class="alternative" id="altD"><span>d</span>
+                    <p>Bahia</p>
+                </button>
+            </div>
+            <div class="background-strip"></div>
+        </div>
+
+        <div class="container-right">
+            <div class="container-money">
+                <h1>Total acumulado:</h1>
+                <h1 id="amountOfMoney">R$ 0</h1>
+            </div>
+
+            <div class="container-helps">
+                <div class="title">
+                    <h1>Ajudas</h1>
+                </div>
+                <div class="helps">
+                    <button class="help" id="btn-skip">Pular pergunta <span>3</span></button>
+                    <button class="help" id="btn-audience">Ajuda da platéia<span>3</span></button>
+                    <button class="help" id="btn-students">Ajuda dos Universitários<span>3</span></button>
+                    <button class="help" id="btn-cards">Ajuda das cartas<span>3</span></button>
+                    <button class="help" id="btn-giveup">Desistir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-modal hide">
+        <div class="modal-card">
+            <div class="head">
+                <div class="title">
+                    <h1>Título</h1>
+                </div>
+                <button class="btn-close" id="btn-close-modal">
+                    <img src="./assets/close.svg" alt="Fechar">
+                </button>
+            </div>
+            <div class="container-content">
+                <div class="container-cards hide">
+
+                    <div id="card1" class="card">
+                        <p>?</p>
+                    </div>
+
+                    <div id="card2" class="card">
+                        <p>?</p>
+                    </div>
+
+                    <div id="card3" class="card">
+                        <p>?</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
