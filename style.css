@@ -411,7 +411,7 @@ button:hover {
     justify-content: center;
 }
 
-.person-card img {
+.person-card svg {
     height: 2.5rem;
     width: 2.5rem;
     position: absolute;
