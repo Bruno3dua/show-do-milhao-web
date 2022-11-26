@@ -56,7 +56,7 @@ function incorrectAlternatives() {
 function printPersorCard(containerCardName, numberOfCards) {
     for (let i = 0; i < numberOfCards; i++) {
         let personCard = createAndInsertDiv(containerCardName, 'person-card')
-        let icon = "<img src='../assets/person.svg' alt='Ícone de uma pessoa'>"
+        let icon = "<img src='https://imgur.com/EoGl2jK' alt='Ícone de uma pessoa'>"
 
         modal.querySelector('.title').innerHTML = '<h1>Platéia</h1>'
 
