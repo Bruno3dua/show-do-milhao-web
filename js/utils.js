@@ -39,6 +39,12 @@ export function createAndInsertDiv(insertIn, divClassName) {
     return divName
 }
 
+export function createAndInsertButton(insertIn, buttonClassName) {
+    let buttomName = document.createElement('button')
+    insertIn.appendChild(buttomName)
+    buttomName.classList.add(buttonClassName)
+    return buttomName
+}
 export function scale(element, scaleFactor) {
     element.style.transform = `scale(${scaleFactor})`
 }

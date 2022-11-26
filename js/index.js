@@ -1,8 +1,7 @@
 import { updateHelpsDisplay, updateQuestionDisplay } from "./display.js";
 import questions from "./questions.js";
-import { toggleElementHide, hideElement, selectRandomQuestion, toggleElementsHide, showElement } from "./utils.js";
-import { audienceHelp, stillHaveAttemptsLeft, containerParentHints, studentsHelp } from "./modalHelps.js";
-import './animation.js'
+import { createAndInsertButton, hideElement, scale, selectRandomQuestion, showElement } from "./utils.js";
+import './buttons.js'
 
 const playerState = {
     difficult: 1,
@@ -23,28 +22,16 @@ const currentQuestion = {
 }
 
 const modal = document.querySelector('.container-modal')
-const containerContent = document.querySelector('.container-content')
-
-const btnCloseModal = document.querySelector('#btn-close-modal')
-
-const btnAudienceHelp = document.querySelector('#btn-audience')
-const btnSkipHelp = document.querySelector('#btn-skip')
-const btnStudentsHelp = document.querySelector('#btn-students')
-const btnCardsHelp = document.querySelector('#btn-cards')
-const btnGiveUp = document.querySelector('#btn-giveup')
-
-const btnPlay = document.querySelector('#btn-play')
-
-const containerMenu = document.querySelector('.container-menu')
 const containerGame = document.querySelector('.container-game')
 const containerAlternatives = document.querySelector('.container-alternatives')
-const containerCards = document.querySelector('.container-cards')
 
-let questionNumber
 let a = containerAlternatives.querySelector('#altA')
 let b = containerAlternatives.querySelector('#altB')
 let c = containerAlternatives.querySelector('#altC')
 let d = containerAlternatives.querySelector('#altD')
+
+let questionNumber
+
 
 function newQuestion(playerState) {
     questionNumber = selectRandomQuestion(playerState.difficult)
@@ -52,6 +39,8 @@ function newQuestion(playerState) {
     if (questions[questionNumber].alreadyAnswered == 1) {
         newQuestion(playerState)
     } else {
+        updateCurrentQuestionObject()
+        updateAllDisplay()
         return
     }
 }
@@ -82,7 +71,14 @@ function endGame() {
         showElement(modal)
         hideElement(containerGame)
         modal.querySelector('.container-content').innerHTML = 'Você Perdeu'
+        let refresh = createAndInsertButton(modal.querySelector('.container-content'), 'refresh')
+        refresh.innerHTML = 'Reiniciar'
+        scale(refresh, .5)
+        refresh.onclick = () => {
+            location.reload()
+        }
     }, 2000)
+
 }
 
 function incorrectAlternative(alternative) {
@@ -175,9 +171,6 @@ function game() {
 
     newQuestion(playerState)
 
-    updateCurrentQuestionObject()
-    updateAllDisplay()
-
     a.onclick = () => {
         showAnswer(a)
     }
@@ -206,62 +199,10 @@ function game() {
     }
 }
 
-btnPlay.addEventListener('click', () => {
-    toggleElementsHide(containerMenu, containerGame)
-    game()
-})
+export function giveUp() {
 
-window.onkeydown = (e) => {
-    if (e.key == 'Escape')
-        hideElement(modal)
-}
-
-modal.addEventListener('click', (e) => {
-    if (e.target == modal)
-        toggleElementHide(modal)
-})
-
-btnCloseModal.addEventListener('click', () => {
-    toggleElementHide(modal)
-    hideElement(containerCards)
-    containerContent.removeChild(containerParentHints)
-})
-
-btnSkipHelp.onclick = () => {
-    if (stillHaveAttemptsLeft(btnSkipHelp)) {
-        playerState.skipCount -= 1
-        updateHelpsDisplay(playerState)
-
-        newQuestion(playerState)
-        updateCurrentQuestionObject()
-        updateAllDisplay()
-    }
 }
 
 
-btnStudentsHelp.onclick = () => {
-    if (stillHaveAttemptsLeft(btnStudentsHelp)) {
-        studentsHelp()
-    }
-}
 
-btnCardsHelp.onclick = () => {
-    if (stillHaveAttemptsLeft(btnCardsHelp)) {
-        playerState.cardsAssistancesCount -= 1
-        updateHelpsDisplay(playerState)
-        toggleElementHide(modal)
-        showElement(containerCards)
-    }
-}
-
-btnAudienceHelp.onclick = () => {
-    audienceHelp()
-}
-
-btnGiveUp.addEventListener('click', () => {
-    endGame()
-})
-
-
-
-export { playerState, currentQuestion }
+export { playerState, currentQuestion, game, endGame, newQuestion, a, b, c, d }
