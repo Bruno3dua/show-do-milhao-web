@@ -23,6 +23,10 @@
     display: none !important;
 }
 
+img {
+    font-size: 5px;
+}
+
 body {
     background: var(--bg-gradient);
     height: 100vh;
@@ -79,6 +83,31 @@ h1 {
     cursor: pointer;
 }
 
+.btnGivepY,
+.btnGivepN,
+.refresh {
+    border-radius: 9999px;
+    padding: 1.5rem 6rem;
+    font-weight: 800;
+    font-size: 6rem;
+    color: var(--txt-dark);
+    background-color: var(--bg-secundary);
+    transition: background .3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btnGivepY {
+    background-color: var(--bg-dark);
+    color: var(--txt-white);
+    margin-bottom: 2rem;
+}
+
+.btnGivepY:hover {
+    background-color: var(--bg-secundary-blue);
+}
+
+
 button:hover {
     background-color: var(--bg-secundary-hover);
 }
@@ -86,7 +115,7 @@ button:hover {
 .container-game {
     display: flex;
     flex-direction: row;
-    animation: slide-up  .5s;
+    animation: slide-up .5s;
 }
 
 
@@ -138,7 +167,7 @@ button:hover {
     line-height: 3.6rem;
 }
 
-.container-alternatives{
+.container-alternatives {
     width: clamp(20rem, 10rem + 30vw, 60rem);
     display: flex;
     flex-direction: column;
@@ -189,9 +218,11 @@ button:hover {
     0% {
         background-color: green;
     }
+
     50% {
         background-color: var(--bg-secundary);
     }
+
     100% {
         background-color: green;
     }
@@ -227,7 +258,7 @@ button:hover {
     display: flex;
     gap: 5.7rem;
     flex-direction: column;
-    width: clamp(20rem, 10rem + 30vw, 55rem);
+    width: clamp(20rem, 10rem + 30vw, 60rem);
     align-items: center;
     justify-content: center;
     background-color: var(--bg-secundary-blue-hover);
@@ -426,7 +457,7 @@ button:hover {
     color: white;
     display: flex;
     align-items: center;
-    
+
     flex-direction: column;
     justify-content: space-around;
 }
@@ -441,14 +472,14 @@ button:hover {
         opacity: 0;
         margin-bottom: -90vh;
         transform: scale(.1)
-      }
-    
-      to {
+    }
+
+    to {
         opacity: 1;
         position: 0px;
         margin-bottom: 0;
         transform: scale(1);
-      }
+    }
 }
 
 @keyframes opacity {
@@ -460,4 +491,3 @@ button:hover {
         opacity: 1;
     }
 }
-

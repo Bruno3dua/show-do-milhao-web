@@ -1,5 +1,7 @@
 import questions from "./questions.js"
-import { playerState } from "./index.js"
+import { a, b, c, d, playerState } from "./index.js"
+import { resetCardsToDefalt } from "./modalHelps.js"
+
 
 const skipCountDisplay = document.querySelector('#btn-skip span')
 const audienceCountDisplay = document.querySelector('#btn-audience span')
@@ -25,6 +27,13 @@ export function updateQuestionDisplay(currentQuestion) {
 
     money.innerText = "R$ " + playerState.money
     numberOfQuestion.innerText = "Pergunta " + (playerState.numberOfQuestionsAnswered + 1)
+
+    a.removeAttribute('style')
+    b.removeAttribute('style')
+    c.removeAttribute('style')
+    d.removeAttribute('style')
+
+    resetCardsToDefalt()
 }
 
 export function updateHelpsDisplay (playerState) {
