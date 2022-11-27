@@ -32,8 +32,8 @@
 
     .container-money {
         width: 90vw;
-        position: absolute;
-        bottom: 15rem;
+        position: fixed;
+        bottom: 8rem;
         padding: 1.6rem;
         height: 4rem;
     }
