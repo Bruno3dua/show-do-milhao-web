@@ -64,6 +64,10 @@
         padding: 1.6rem;
     }
 
+    .alternative p {
+        text-align: left;
+    }
+
     .alternative span {
         height: 4rem;
         width: 4rem;

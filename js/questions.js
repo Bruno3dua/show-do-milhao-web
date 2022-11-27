@@ -3,7 +3,7 @@ const questions = [
         alreadyAnswered: 0,
         question: 'Qual é o nome dado ao estado da água em forma de gelo? ',
         a: 'Líquido',
-        b: 'Solido',
+        b: 'Sólido',
         c: 'Gasoso',
         d: 'Vaporoso',
         rightQ: 'b'
@@ -24,7 +24,7 @@ const questions = [
         question: 'Qual é o personagem do folclore brasileiro que tem uma perna só? ',
         a: 'Cuca',
         b: 'Negrinho do Pastoreio',
-        c: 'Boiata',
+        c: 'Boiatá',
         d: 'Saci-Pererê',
         rightQ: 'd'
     },
@@ -111,7 +111,7 @@ const questions = [
 
     {
         alreadyAnswered: 0,
-        question: 'Qual lugar é também chamado de Santa Se? ',
+        question: 'Qual lugar é também chamado de Santa Sé? ',
         a: 'Veneza',
         b: 'Vitória',
         c: 'Vancouver',
@@ -164,7 +164,7 @@ const questions = [
         question: 'O churrasco é considerado uma comida típica de qual estado? ',
         a: 'Ceará',
         b: 'Rio Grande do Sul',
-        c: 'Para',
+        c: 'Pará',
         d: 'Maranhão',
         rightQ: 'b'
     },
@@ -271,11 +271,11 @@ const questions = [
 
     {
         alreadyAnswered: 0,
-        question: 'O que é gondola? ',
+        question: 'O que é gôndola? ',
         a: 'Embarcação',
         b: 'Brinquedo',
-        c: 'Musica',
-        d: 'Simbolo',
+        c: 'Música',
+        d: 'Símbolo',
         rightQ: 'a'
     },
 
@@ -342,7 +342,7 @@ const questions = [
     {
         alreadyAnswered: 0,
         question: 'Que rio corta a cidade de Londres na Inglaterra? ',
-        a: 'Tamisa',
+        a: 'Tâmisa',
         b: 'Sena',
         c: 'Reno',
         d: 'Aube',
@@ -421,8 +421,8 @@ const questions = [
 
     {
         alreadyAnswered: 0,
-        question: 'Qual desses paises nao fica na ásia? ',
-        a: 'Paquistao',
+        question: 'Qual desses países não fica na ásia? ',
+        a: 'Paquistão',
         b: 'Japão',
         c: 'Tailândia',
         d: 'Egito',
@@ -453,7 +453,7 @@ const questions = [
         alreadyAnswered: 0,
         question: 'Onde nasceu Van Gogh o grande pintor impressionista? ',
         a: 'Polônia',
-        b: 'Franca',
+        b: 'França',
         c: 'Itália',
         d: 'Holanda',
         rightQ: 'd'
@@ -483,7 +483,7 @@ const questions = [
         alreadyAnswered: 0,
         question: 'Qual desses quatro pesos é o mais leve? ',
         a: '10 onças',
-        b: '10 gramas',
+        b: '10 gramos',
         c: '10 quilos',
         d: '10 libras',
         rightQ: 'b'
@@ -492,8 +492,8 @@ const questions = [
     {
         alreadyAnswered: 0,
         question: 'Brahma e o deus de que religião? ',
-        a: 'Hinduismo',
-        b: 'Xintoismo',
+        a: 'Hinduísmo',
+        b: 'Xintoísmo',
         c: 'Budismo',
         d: 'Islamismo',
         rightQ: 'a'
@@ -501,7 +501,7 @@ const questions = [
 
     {
         alreadyAnswered: 0,
-        question: 'Que ramo da pecuária ocupa- se de bodes e cabras? ',
+        question: 'Que ramo da pecuária ocupa-se de bodes e cabras? ',
         a: 'Asinino',
         b: 'Caprino',
         c: 'Bufalino',
@@ -581,8 +581,8 @@ const questions = [
 
     {
         alreadyAnswered: 0,
-        question: 'A eletrónica é parte de qual ciência? ',
-        a: 'Fisica',
+        question: 'A eletrônica é parte de qual ciência? ',
+        a: 'Física',
         b: 'Biologia',
         c: 'Química',
         d: 'Botânica',
@@ -591,7 +591,7 @@ const questions = [
 
     {
         alreadyAnswered: 0,
-        question: 'A Bélgica e: ',
+        question: 'A Bélgica é: ',
         a: 'Uma república',
         b: 'Uma monarquia constitucional',
         c: 'Um emirado',
@@ -625,7 +625,7 @@ const questions = [
         a: 'Estados Unidos',
         b: 'Dinamarca',
         c: 'Canada',
-        d: 'Franca',
+        d: 'França',
         rightQ: 'c'
     },
 
@@ -633,7 +633,7 @@ const questions = [
         alreadyAnswered: 0,
         question: 'Em que país você pode gastar rublos? ',
         a: 'Holanda',
-        b: 'Russia',
+        b: 'Rússia',
         c: 'Espanha',
         d: 'África do Sul',
         rightQ: 'b'
@@ -644,16 +644,16 @@ const questions = [
         question: 'Que nome recebe a foz de um rio que se abre para o mar? ',
         a: 'Alagado',
         b: 'Manguezal',
-        c: 'Pantano',
+        c: 'Pântano',
         d: 'Estuário',
         rightQ: 'd'
     },
 
     {
         alreadyAnswered: 0,
-        question: 'Arabica e robusta são tipos de que? ',
+        question: 'Arábica e robusta são tipos de que? ',
         a: 'Uva',
-        b: 'Cafe',
+        b: 'Café',
         c: 'Melão',
         d: 'Laranja',
         rightQ: 'b'
@@ -672,8 +672,8 @@ const questions = [
     {
         alreadyAnswered: 0,
         question: 'Qual é a menor República do mundo? ',
-        a: 'Monaco',
-        b: 'San Marino',
+        a: 'Mônaco',
+        b: 'San Marino', 
         c: 'Nova Zelândia',
         d: 'China',
         rightQ: 'b'

@@ -157,7 +157,7 @@ function deleteAlternatives() {
 
 export function cardsHelp() {
     if (stillHaveAttemptsLeft(btnCardsHelp)) {
-        playerState.cardsAssistancesCount--
+
         updateHelpsDisplay(playerState)
         printCards()
 
@@ -165,18 +165,24 @@ export function cardsHelp() {
             if (!isFliped) {
                 flipCard(card1)
                 deleteAlternatives()
+                playerState.cardsAssistancesCount--
+                updateHelpsDisplay(playerState)
             }
         })
         card2.addEventListener('click', () => {
             if (!isFliped) {
                 flipCard(card2)
                 deleteAlternatives()
+                playerState.cardsAssistancesCount--
+                updateHelpsDisplay(playerState)
             }
         })
         card3.addEventListener('click', () => {
             if (!isFliped) {
                 flipCard(card3)
                 deleteAlternatives()
+                playerState.cardsAssistancesCount--
+                updateHelpsDisplay(playerState)
             }
         })
     }
