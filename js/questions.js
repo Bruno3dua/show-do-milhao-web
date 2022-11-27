@@ -251,7 +251,7 @@ const questions = [
 
     {
         alreadyAnswered: 0,
-        question: 'Que profissional usa uma ferramenta chamada formação? ',
+        question: 'Que profissional usa uma ferramenta chamada formão? ',
         a: 'Carpinteiro',
         b: 'Relojoeiro',
         c: 'Confeiteiro',
