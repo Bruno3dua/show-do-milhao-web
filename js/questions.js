@@ -31,12 +31,12 @@ const questions = [
 
     {
         alreadyAnswered: 0,
-        question: 'Fidel Castro nasceu em que país? ',
-        a: 'Jamaica',
-        b: 'Cuba',
-        c: 'El Salvador',
-        d: 'Mexico',
-        rightQ: 'b'
+        question: 'Qual a letra que representa o número dez em números Romanos? ',
+        a: 'V',
+        b: 'C',
+        c: 'T',
+        d: 'X',
+        rightQ: 'd'
     },
 
     {
