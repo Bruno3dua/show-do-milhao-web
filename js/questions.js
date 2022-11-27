@@ -24,7 +24,7 @@ const questions = [
         question: 'Qual é o personagem do folclore brasileiro que tem uma perna só? ',
         a: 'Cuca',
         b: 'Negrinho do Pastoreio',
-        c: 'Boiatá',
+        c: 'Boitatá',
         d: 'Saci-Pererê',
         rightQ: 'd'
     },
