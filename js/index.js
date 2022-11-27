@@ -71,6 +71,7 @@ function endGame() {
         showElement(modal)
         hideElement(containerGame)
         modal.querySelector('.container-content').innerHTML = 'Você Perdeu'
+        modal.querySelector('.title').innerHTML = '<h1>Puts!</h1>'
         let refresh = createAndInsertButton(modal.querySelector('.container-content'), 'refresh')
         refresh.innerHTML = 'Reiniciar'
         scale(refresh, .5)

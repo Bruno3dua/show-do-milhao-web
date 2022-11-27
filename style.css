@@ -17,6 +17,7 @@
 
     --txt-dark: #000646;
     --txt-white: #FFFFFF;
+
 }
 
 .hide {
@@ -115,7 +116,7 @@ button:hover {
 .container-game {
     display: flex;
     flex-direction: row;
-    animation: slide-up .5s;
+    animation: slide-up-scale1 .5s;
 }
 
 
@@ -336,14 +337,16 @@ button:hover {
 }
 
 .modal-card {
-    height: 45rem;
-    width: 89rem;
+    height: fit-content;
+    /* width: clamp(45rem, 50rem+ 30vw ,90rem); */
+    width: clamp(20rem, 20rem + 50vw, 90rem);
     background-color: var(--bg-secundary-blue-hover);
     display: flex;
     flex-direction: column;
     padding: 3rem;
     border-radius: 2rem;
-    animation: slide-up .3s;
+    animation: slide-up-scale1 .3s;
+    gap: 1.5rem;
 }
 
 
@@ -392,12 +395,15 @@ button:hover {
     justify-content: center;
     width: 100%;
     gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 .container-parent-hint {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: .3rem;
 }
 
 .person-card {
@@ -430,8 +436,8 @@ button:hover {
 .container-cards {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 5rem;
+    width: 50rem;
+    justify-content: space-around;
 }
 
 .card {
@@ -467,10 +473,10 @@ button:hover {
     font-size: 8rem;
 }
 
-@keyframes slide-up {
+@keyframes slide-up-scale1 {
     from {
         opacity: 0;
-        margin-bottom: -90vh;
+        margin-bottom: -80vh;
         transform: scale(.1)
     }
 
