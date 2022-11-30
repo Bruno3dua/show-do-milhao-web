@@ -21,7 +21,7 @@ const questions = [
 
     {
         alreadyAnswered: 0,
-        question: 'Qual é o personagem do folclore brasileiro que tem uma perna só? ',
+        question: 'Qual é o personagem do folclóre brasileiro que tem uma perna só? ',
         a: 'Cuca',
         b: 'Negrinho do Pastoreio',
         c: 'Boitatá',
@@ -101,11 +101,11 @@ const questions = [
 
     {
         alreadyAnswered: 0,
-        question: 'Quando é comemorado o dia da independência do Brasil? ',
-        a: '21 de abril',
-        b: '12 de outubro',
-        c: '7 de setembro',
-        d: '25 de dezembro',
+        question: 'Quando é comemorado o dia da Independência do Brasil? ',
+        a: '21 de Abril',
+        b: '12 de Outubro',
+        c: '7 de Detembro',
+        d: '25 de Dezembro',
         rightQ: 'c'
     },
 
@@ -154,7 +154,7 @@ const questions = [
         question: 'Qual personagem da turma da Mônica tem apenas cinco fios de cabelo? ',
         a: 'Mônica',
         b: 'Cebolinha',
-        c: 'Cascao',
+        c: 'Cascão',
         d: 'Magali',
         rightQ: 'b'
     },
@@ -233,7 +233,7 @@ const questions = [
         alreadyAnswered: 0,
         question: 'A cidade de Pompeia que foi soterrada por um vulcão fica em qual desses países? ',
         a: 'Japão',
-        b: 'Mexico',
+        b: 'México',
         c: 'Itália',
         d: 'Estados Unidos',
         rightQ: 'c'
@@ -285,7 +285,7 @@ const questions = [
         a: 'Japão',
         b: 'China',
         c: 'Índia',
-        d: 'Indonesia',
+        d: 'Indonésia',
         rightQ: 'a'
     },
 
@@ -491,7 +491,7 @@ const questions = [
 
     {
         alreadyAnswered: 0,
-        question: 'Brahma e o deus de que religião? ',
+        question: 'Brahma e o Deus de que religião? ',
         a: 'Hinduísmo',
         b: 'Xintoísmo',
         c: 'Budismo',
@@ -522,7 +522,7 @@ const questions = [
     {
         alreadyAnswered: 0,
         question: 'O trapézio e um músculo que está situado: ',
-        a: 'No pescoco',
+        a: 'No pescoço',
         b: 'No ombro',
         c: 'Na cabeça',
         d: 'No braço',
