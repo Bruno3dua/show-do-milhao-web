@@ -104,7 +104,7 @@ const questions = [
         question: 'Quando é comemorado o dia da Independência do Brasil? ',
         a: '21 de Abril',
         b: '12 de Outubro',
-        c: '7 de Detembro',
+        c: '7 de Setembro',
         d: '25 de Dezembro',
         rightQ: 'c'
     },
