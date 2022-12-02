@@ -6,101 +6,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo do milhão</title>
-    <script src="./js/index.js" defer type="module"></script>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./mobile.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
+    <title>Multiplicação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/script.js" defer type='module'></script>
 </head>
 
 <body>
-    <div class="container-menu">
-        <img src="./assets/logo.svg" alt="Show do milhão" class="logo">
-        <button id="btn-play">JOGAR</button>
-        <div class="background-strip"></div>
-    </div>
+    <main>
+        <form id="formInputs">
+            <legend>Multiplicação de sistemas numéricos</legend>
 
-    <div class="container-game hide">
-        <div class="container-left">
-            <img src="./assets/logo.svg" alt="Show do milhão" class="logo">
-            <div class="container-question">
-                <div class="title">
-                    <h1>Pergunta 00</h1>
+            <fieldset>
+                <div class="inputWrapper">
+                    <label for="firstNumber">Número 1:</label>
+                    <input type="text" id="firstNumber" required>
                 </div>
-                <div class="question-description">
-                    <p></p>
-                </div>
-            </div>
-            <div class="container-alternatives">
-                <button class="alternative" id="altA"><span>a</span>
-                    <p></p>
-                </button>
-                <button class="alternative" id="altB"><span>b</span>
-                    <p></p>
-                </button>
-                <button class="alternative" id="altC"><span>c</span>
-                    <p></p>
-                </button>
-                <button class="alternative" id="altD"><span>d</span>
-                    <p></p>
-                </button>
-            </div>
-            <div class="background-strip"></div>
-        </div>
 
-        <div class="container-right">
-            <div class="container-money">
-                <h1>Total acumulado:</h1>
-                <h1 id="amountOfMoney">R$ 0</h1>
-            </div>
+                <div class="inputWrapper">
+                    <label for="secondNumber">Número 2:</label>
+                    <input type="text" id="secondNumber" required>
+                </div>
 
-            <div class="container-helps">
-                <div class="title">
-                    <h1>Ajudas</h1>
+                <div class="calcWrapper">
+                    <div class="inputWrapper">
+                        <label for="base">Base:</label>
+                        <input type="number" id="base" required>
+                    </div>
+
+                    <button id="btnCalc" form="formInputs">
+                        Calcular
+                        <img src="./assets/arrow.svg" alt="Seta apontando para a direita">
+                    </button>
                 </div>
-                <div class="helps">
-                    <button class="help" id="btn-skip"><p>Pular pergunta</p> <img src="./assets/arrow.svg" class = 'icon-helps'alt="" style="display: none;"> <span>3</span></button>
-                    <button class="help" id="btn-audience"><p>Ajuda da platéia</p> <img src="./assets/person.svg" class = 'icon-helps'alt="" style="display: none;"> <span>3</span></button>
-                    <button class="help" id="btn-students"><p>Ajuda dos Universitários</p> <img src="./assets/student.svg" class = 'icon-helps'alt="" style="display: none;"> <span>3</span></button>
-                    <button class="help" id="btn-cards"><p>Ajuda das cartas</p> <img src="./assets/card.svg" class = 'icon-helps'alt="" style="display: none;"> <span>3</span></button>
-                    <button class="help" id="btn-giveup"><p>Desistir</p> <img src="./assets/x.svg" class = 'icon-helps'alt="" style="display: none;"></button>
-                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <div class="modalWrapper hide">
+        <div class="modalCard">
+            <h1>Cálculo:</h1>
+            <div class="calc">
+                <p id="multiplicand">1001011101</p>
+                <p id="multiplier">x 1011</p>
+                <div class="line"></div>
+                <div class="container-result"></div>
+                <div class="line"></div>
+                <p id="sumResult"></p>
             </div>
+            <div class="close"></div>
         </div>
     </div>
 
-    <div class="container-modal hide">
-        <div class="modal-card">
-            <div class="head">
-                <div class="title">
-                    <h1>Título</h1>
-                </div>
-                <button class="btn-close" id="btn-close-modal">
-                    <img src="./assets/close.svg" alt="Fechar">
-                </button>
-            </div>
-            <div class="container-content">
-                <div class="container-cards hide">
-
-                    <div id="card1" class="card">
-                        <p>?</p>
-                    </div>
-
-                    <div id="card2" class="card">
-                        <p>?</p>
-                    </div>
-
-                    <div id="card3" class="card">
-                        <p>?</p>
-                    </div>
-
-                </div>
-            </div>
-
-
-        </div>
+    <div class="error hide">
+        <p>Digite apenas números</p>
     </div>
 </body>
 

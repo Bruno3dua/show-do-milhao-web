@@ -1,50 +1,33 @@
-import questions from "./questions.js";
-
-export function selectRandomQuestion(difficult)
-{
-    if (difficult == 1)
-        return randomNumber(0, 19);
-    else if (difficult == 2)
-        return randomNumber(20, 39);
-    else if (difficult == 3)
-        return randomNumber(40, 59);
-    else if (difficult == 4)
-        return randomNumber(60, 69);
+export function resultToString(line) {
+    let strResult = ''
+    for (let i = 0; i < line.length; i++) {
+        strResult += line[i]
+    }
+    return strResult
 }
 
-export function randomNumber(low, high) {
-     return (Math.round(Math.random() * 9999) % (high - low + 1) + low)
+export function getBiggestElementLength(element) {
+    let numberOfElements = element.length
+    let biggest = 0
+    for (let i = 0; i < numberOfElements; i++) {
+        if (element[i].length > biggest)
+            biggest = element[i].length
+    }
+    return biggest
 }
 
-export function toggleElementHide(element) {
-    element.classList.toggle('hide')
-}
-export function toggleElementsHide(element1, element2) {
-    element1.classList.toggle('hide')
-    element2.classList.toggle('hide')
-}
-
-export function hideElement(element) {
-    element.classList.add('hide')
+export function createNewMatrix(line, column) {
+    let matrix = new Array(line);
+    for (let i = 0; i < line; i++)
+        matrix[i] = new Array(column);
+    return matrix
 }
 
-export function showElement(element) {
-    element.classList.remove('hide')
+export function fillUndefinedElements(arrayelements) {
+    for (let i = 0; i < arrayelements.length; i++) {
+        let currentElement = arrayelements[i]
+
+        arrayelements[i] = currentElement.padStart(getBiggestElementLength(arrayelements), '0')
+    }
 }
 
-export function createAndInsertDiv(insertIn, divClassName) {
-    let divName = document.createElement('div')
-    insertIn.appendChild(divName)
-    divName.classList.add(divClassName)
-    return divName
-}
-
-export function createAndInsertButton(insertIn, buttonClassName) {
-    let buttomName = document.createElement('button')
-    insertIn.appendChild(buttomName)
-    buttomName.classList.add(buttonClassName)
-    return buttomName
-}
-export function scale(element, scaleFactor) {
-    element.style.transform = `scale(${scaleFactor})`
-}
